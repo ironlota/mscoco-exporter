@@ -1,0 +1,52 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-airbnb-base",
+    "eslint-config-airbnb-base/rules/strict",
+    "prettier"
+  ],
+  "plugins": ["babel", "import"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "strict": [2, "never"],
+    "quotes": [2, "single"],
+    "padded-blocks": 0,
+    "no-tabs": 2,
+    "indent": "off",
+    "comma-dangle": [0, "always-multiline"],
+    "no-cond-assign": [2, "except-parens"],
+    "prefer-const": 1,
+    "no-const-assign": 2,
+    "eol-last": 0,
+    "curly": 2,
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": false
+      }
+    ],
+    "no-nested-ternary": 1,
+    "no-class-assign": 2,
+    "arrow-spacing": 2,
+    "no-use-before-define": 0,
+    "babel/arrow-parens": [2, "as-needed"],
+    "object-shorthand": [2, "methods"],
+    "no-multiple-empty-lines": 0,
+    "consistent-return": 0,
+    "no-console": 0,
+    "new-cap": 0,
+    "default-case": 0,
+    "no-unused-vars": 1,
+    "no-alert": 0,
+    "no-undef": 2,
+    "no-underscore-dangle": 0,
+    "semi": 1,
+    "prefer-destructuring": 1,
+    "max-len": 0,
+    "global-require": 0,
+    "class-methods-use-this": 0
+  }
+}

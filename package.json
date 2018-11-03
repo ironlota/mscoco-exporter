@@ -1,0 +1,48 @@
+{
+  "name": "mscoco_preprocess",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/rayandrews/aspect-based-sentiment-analysis-scraping.git",
+  "author": "Ray Andrew <raydreww@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "JSONStream": "^1.3.5",
+    "bluebird": "^3.5.2",
+    "chalk": "^2.4.1",
+    "config": "^2.0.1",
+    "dotenv": "^6.1.0",
+    "event-stream": "^4.0.1",
+    "glob": "^7.1.3",
+    "json2csv": "^4.2.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.8",
+    "ora": "^3.0.0",
+    "signale": "^1.3.0",
+    "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
