@@ -72,6 +72,28 @@ Make `env` file for overriding configuration
       ----folder, --folder  Output folder                          [default: "data"]
 ```
 
+## Translating Caption to Another Language
+
+Make `env` file for overriding configuration
+
+```
+  GOOGLE_PROJECT_ID=="project"
+  GOOGLE_APPLICATION_CREDENTIALS="google-auth.json"
+```
+
+```bash
+    Usage: yarn start translate [options]
+
+    Translate Captions from English to another language
+
+    Options:
+      --version             Show version number                            [boolean]
+      --help                Show help                                      [boolean]
+      ----file, --file      Normalized JSON file                       [default: ""]
+      ----folder, --folder  Output folder                          [default: "data"]
+      ----target, --target  Target Language                          [default: "id"]
+```
+
 ## Author
 
 - Ray Andrew - [Email](raydreww@gmail.com) - [Github](https://github.com/rayandrews)

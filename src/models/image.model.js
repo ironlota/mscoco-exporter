@@ -1,16 +1,11 @@
 const mongoose = require('mongoose');
 const config = require('config');
 
+const schema = require('./schema');
+
 const imageSchema = new mongoose.Schema({
-  image_id: { type: Number },
-  license: { type: Number },
-  file_name: { type: String },
-  coco_url: { type: String },
-  height: { type: Number },
-  width: { type: Number },
-  date_captured: { type: Date, default: Date.now },
-  flickr_url: { type: String },
-  known_for: { type: [String], default: [] },
+  ...schema,
+  captions: { type: [String], default: [] },
 });
 
 const imageModel = mongoose.model(

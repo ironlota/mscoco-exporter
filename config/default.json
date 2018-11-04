@@ -1,6 +1,11 @@
 {
   "mongodb": {
     "url": "mongodb://mongo:27017/images",
-    "imagesCollection": "images"
+    "imagesCollection": "images",
+    "imagesTranslatedCollection": "images-translated"
+  },
+  "google": {
+    "projectId": "xxx",
+    "keyFilename": "google-env.json"
   }
 }

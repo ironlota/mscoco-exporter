@@ -1,5 +1,9 @@
 {
   "mongodb": {
     "url": "MONGO_URL"
+  },
+  "google": {
+    "projectId": "GOOGLE_PROJECT_ID",
+    "keyFilename": "GOOGLE_KEY_FILENAME"
   }
 }

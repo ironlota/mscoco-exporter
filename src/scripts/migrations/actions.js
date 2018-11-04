@@ -6,7 +6,6 @@ const _ = require('lodash');
 
 const { createConnection, closeClonnection } = require('../../utils/mongo');
 const { streamWithQuery$ } = require('../../utils/stream');
-
 const fs = require('../../utils/fs-promise');
 
 const models = require('../../models');
@@ -32,7 +31,11 @@ const action = async arg => {
           signale.fatal(err);
         })
         .on('data', dat => {
-          data.push(dat);
+          const { id, ...rest } = dat;
+          data.push({
+            ...rest,
+            image_id: id,
+          });
         })
         .on('end', async () => {
           signale.success(`${chalk.bgGreen('READING')} JSON Data SUCCEED!`);

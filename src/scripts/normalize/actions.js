@@ -10,17 +10,7 @@ const { Transform: json2csvTransform } = require('json2csv');
 const fs = require('../../utils/fs-promise');
 const { stream$, readStream, writeStream } = require('../../utils/stream');
 
-const fields = [
-  'license',
-  'file_name',
-  'coco_url',
-  'height',
-  'width',
-  'date_captured',
-  'flickr_url',
-  'id',
-  'captions',
-];
+const { fieldNormalize, unwind } = require('../fields');
 
 const actions = arg => {
   if (_.isEmpty(arg.file)) {
@@ -110,7 +100,7 @@ const actions = arg => {
           });
 
         const json2csv = new json2csvTransform(
-          { fields, unwind: ['captions'] },
+          { fields: fieldNormalize, unwind },
           { highWaterMark: 16384, encoding: 'utf-8', objectMode: true }
         );
 
