@@ -82,3 +82,8 @@ annotation/
 
 google-env.json
 google-env.json.env
+
+emotionize/
+flickr-out/
+flickr/
+transform/

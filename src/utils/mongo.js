@@ -24,7 +24,7 @@ module.exports = {
       .catch(err => {
         signale.fatal(err);
       }),
-  closeClonnection: () =>
+  closeConnection: () =>
     mongoose.connection
       .close()
       .then(() => {

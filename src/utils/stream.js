@@ -22,6 +22,11 @@ const writeStream = file => {
 module.exports = {
   readStream,
   writeStream,
+  streamWithoutQuery$: file => {
+    const jsonRead = readStream(file);
+
+    return jsonRead.pipe(es.mapSync(data => data));
+  },
   streamWithQuery$: (file, query = '*') => {
     const jsonRead = readStream(file);
     const parser = JSONStream.parse(query);

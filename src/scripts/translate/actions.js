@@ -7,7 +7,7 @@ const _ = require('lodash');
 
 const { Transform: json2csvTransform } = require('json2csv');
 
-const { createConnection, closeClonnection } = require('../../utils/mongo');
+const { createConnection, closeConnection } = require('../../utils/mongo');
 const {
   streamWithQuery$,
   readStream,
@@ -158,7 +158,7 @@ const action = async arg => {
             })
             .catch(err => signale.fatal(err));
 
-          await closeClonnection();
+          await closeConnection();
         });
     } catch (error) {
       signale.error(error);
